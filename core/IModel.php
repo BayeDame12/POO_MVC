@@ -1,5 +1,7 @@
 <?php
     namespace App\Core;
+echo"vous etes dans IModel";
+echo"</br>";
 
     interface IModel{
         //Methodes abstraites

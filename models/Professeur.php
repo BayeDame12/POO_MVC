@@ -1,9 +1,14 @@
 <?php
     namespace App\Model;
-
+    echo"vous etes dans PROFFESUR";
+Echo"</br>";
     class Professeur extends Personne{
         private string $grade;
 
+        public function __construct() {
+            parent::$role = "ROLE_PROFFESSEUR";
+            $this->inscriptions = [];
+        }
         //many to many avec classe - Approche fonction navigationnelles
         public function classes():array{
             return [];
@@ -34,6 +39,8 @@
             $db = parent::database();
             $db->connectionBD();
                 $sql = "SELECT id, prenom, nom, grade FROM ".parent::table()." WHERE role LIKE '".parent::role("ROLE_PROFESSEUR")."'";
+                echo $sql;
+                die();
                 $results = $db->executeSelect($sql);
             $db->closeConnection();
             return $results;     
@@ -42,8 +49,8 @@
         public function insert():int{
             $db = parent::database();
             $db->connectionBD();
-                $sql = "INSERT INTO personne (`prenom`, `nom`, `role`, `grade`) VALUES (?, ?, ?, ?)";
-                $result = $db->executeUpdate($sql, [$this->prenom, $this->nom,  parent::$role,  $this->grade]);
+                $sql = "INSERT INTO personne (`nom_complet`, `role`, `grade`) VALUES (?, ?, ?)";
+                $result = $db->executeUpdate($sql, [$this->nomComplet,parent::$role,  $this->grade]);
             $db->closeConnection();
             return $result;     
         }

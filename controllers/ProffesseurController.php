@@ -1,11 +1,15 @@
 <?php
 namespace App\Controller;
+use App\Core\Controller;
+use App\Core\Request;
 
-class ProffesseurController{
+class ProffesseurController extends Controller{
 
     public function affecterClasse(){
 
-        echo"BIENVENUE DANS L ACTION AFFECTER UNE CLASSE";
+        echo"BIENVENUE la methode d affecterClasse ";  
+Echo"</br>";
+
         
     }
 

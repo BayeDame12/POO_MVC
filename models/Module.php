@@ -1,5 +1,6 @@
 <?php
     namespace App\Model;
+    echo"vous etes dans MODULE";
 
     class Module{
         private int $id;

@@ -1,6 +1,7 @@
 <?php
     namespace App\Model;
     use App\Core\Model;
+    echo"vous etes dans INSCRIPTION";
 
     class Inscription extends Model{
         private int $id;

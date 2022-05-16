@@ -3,6 +3,9 @@ use App\Core\Router;
 use App\Controller\SecurityController;
 use App\Controller\ClassController;
 use App\Exception\RouteNotFoundException;
+echo"vous etes dans WEB_ROOT";
+Echo"</br>";
+
 
 $router=new Router();
 $router->route('/login',[SecurityController::class,"authentification"]);

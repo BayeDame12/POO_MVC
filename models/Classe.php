@@ -1,6 +1,7 @@
 <?php
     namespace App\Model;
     use App\Core\Model;
+    echo"vous etes dans CLASSE";
 
     class Classe extends Model  {
         private int $id;

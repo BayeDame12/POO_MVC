@@ -1,5 +1,7 @@
 <?php
     namespace App\Model;
+    echo"vous etes dans RP";
+    Echo"</br>";
 
     class RP extends User{
         //one to many prof,  un RP plusieurs ajouts de profs

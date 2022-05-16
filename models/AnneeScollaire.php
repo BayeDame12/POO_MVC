@@ -1,6 +1,7 @@
 <?php
     namespace App\Model;
     use App\Core\Model;
+    echo"vous etes dans ANNEE SCOLAIRE";
 
     class Annee extends Model{
         private int $id;

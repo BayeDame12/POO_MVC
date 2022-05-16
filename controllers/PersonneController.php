@@ -1,8 +1,10 @@
 <?php
 namespace App\Controller;
 
-class PersonneController{
+echo"BIENVENUE DANS le controlleur peronne";   
 
-    
+use App\Core\Controller;
+use App\Core\Request;
+class PersonneController extends Controller{
 
 }
