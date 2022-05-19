@@ -1,6 +1,5 @@
 <?php
     namespace App\Model;
-    echo"vous etes dans PROFFESUR";
 Echo"</br>";
     class Professeur extends Personne{
         private string $grade;
@@ -35,16 +34,17 @@ Echo"</br>";
             return $this;
         }
 
-        public static function findAll():array{
+     
+           
+        public static function findAll():array{   
+            
             $db = parent::database();
             $db->connectionBD();
-                $sql = "SELECT id_personne, nom_complet, grade FROM ".parent::table()." WHERE role LIKE '".parent::role("ROLE_PROFESSEUR")."'";
-                echo $sql;
-                // die();
+                $sql = "SELECT id_personne, nom_complet, role, grade FROM ".parent::table()." WHERE role LIKE '".parent::role("ROLE_PROFFESSEUR")."'";
                 $results = $db->executeSelect($sql);
             $db->closeConnection();
-            return $results;     
-        }   
+            return $results;      
+        }  
 
         public function insert():int{
             $db = parent::database();

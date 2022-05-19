@@ -1,7 +1,7 @@
 <?php
     namespace App\Model;
-    echo"vous etes dans USER";
-    Echo"</br>";
+    // echo"vous etes dans USER";
+    // Echo"</br>";
     abstract class User extends Personne{
         protected string $login;
         protected string $password;

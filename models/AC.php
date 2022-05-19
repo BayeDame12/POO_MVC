@@ -23,7 +23,7 @@
             
             $db = parent::database();
             $db->connectionBD();
-                $sql = "SELECT id_personne, nom_complet, login, password FROM ".parent::table()." WHERE role LIKE '".parent::role("ROLE_AC")."'";
+                $sql = "SELECT id_personne, nom_complet, role, login, password FROM ".parent::table()." WHERE role LIKE '".parent::role("ROLE_AC")."'";
                 $results = $db->executeSelect($sql);
             $db->closeConnection();
             return $results;      

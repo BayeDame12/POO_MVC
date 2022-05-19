@@ -19,8 +19,10 @@
             // var_dump($uri);
             if (isset($this->routes[$uri])) {
 
-                [$ctrClass,$action]=$this->routes[$uri];;
-                if (class_exists($ctrClass) && method_exists($ctrClass,$action)) {           
+                [$ctrClass,$action]=$this->routes[$uri];
+                
+                if (class_exists($ctrClass) && method_exists($ctrClass,$action)) {   
+
                     $ctrl=new $ctrClass($this->request); 
                      //$ctrl=new SecurityController($this->request)=>__construct();
                     // $ctrl->{$action()};//$ctrl->authentification mais le soucis en est k c statitik psk ya pas k authentificatin

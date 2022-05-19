@@ -1,8 +1,8 @@
 <?php
     namespace App\Model;
     use App\Core\Model;
-    echo"vous etes dans PERSONNE";
-    Echo"</br>";
+    // echo"vous etes dans PERSONNE";
+    // Echo"</br>";
 
 //Classe concrète on connait sa def, elle n'a que des méthodes concrètes
 //Classe abstraite on ne connait pas sa definition, elle peut avoir des méthodes concrètes et abstraites, elle est non instantiable

@@ -1,5 +1,5 @@
 <?php
-    namespace App\Model;
+    namespace App\Model; 
     echo"vous etes dans ETUDIANT";
 
     class Etudiant extends User{

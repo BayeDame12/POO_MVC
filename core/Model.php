@@ -1,12 +1,12 @@
 <?php
     namespace App\Core;
-    echo"vous etes dans Model";
-    echo"</br>";
+    // echo"vous etes dans Model";
+    // echo"</br>";
 
     class Model implements IModel{
         public static function table():string{
-            echo"BIENVENUE la methode table ";   
-            echo"</br>";
+            // echo"BIENVENUE la methode table ";   
+            // echo"</br>";
             $table = get_called_class();
             $table = str_replace("App\\Model\\", "", $table);
             $table = ($table == "Professeur" or $table == "AC" or $table == "RP" or $table == "Etudiant" or $table == "User") ? "personne" : strtolower($table);
@@ -15,15 +15,15 @@
         }
 
         public static function role($role) {  
-            echo"BIENVENUE la methode role ";   
-            echo"</br>";
+            // echo"BIENVENUE la methode role ";   
+            // echo"</br>";
             return  $role;
         }
 
        //dependance voir diag de classes:creation dun objet de type database
         protected  static function database():Database{
-            echo"BIENVENUE la methode database ";   
-            echo"</br>";
+            // echo"BIENVENUE la methode database ";   
+            // echo"</br>";
             return new Database();
         }
 
