@@ -2,10 +2,6 @@
     namespace App\Core;
     use App\Core\Model;
     use App\Exception\RouteNotFoundException;
-
-    echo"vous etes dans Router";
-Echo"</br>";
-    
     class Router{
         private Request $request;
         public function __construct()
@@ -15,20 +11,15 @@ Echo"</br>";
 
         private array $routes=[];   
         public function route(string $uri,array $action) {
-            echo"BIENVENUE la methode route ";   
-            echo"</br>";
             $this->routes[$uri]=$action;
         }
         //Est ce que  l'uri qui la taper se trouve dans les tableau de route  
          function resolve(){
-            echo"BIENVENUE la methode resolve ";   
-            echo"</br>";
-            //recuperatin de l uri et y ajoiter un /slash
             $uri="/".$this->request->getUri()[0];
             // var_dump($uri);
             if (isset($this->routes[$uri])) {
-                $route=$this->routes[$uri];
-                [$ctrClass,$action]=$route;
+
+                [$ctrClass,$action]=$this->routes[$uri];;
                 if (class_exists($ctrClass) && method_exists($ctrClass,$action)) {           
                     $ctrl=new $ctrClass($this->request); 
                      //$ctrl=new SecurityController($this->request)=>__construct();

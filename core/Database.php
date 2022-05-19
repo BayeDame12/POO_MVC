@@ -27,7 +27,7 @@
                 if($query->rowCount() == 0 ) return null;
             }
             else{
-                $result = $query->fetchAll(\PDO::FETCH_OBJ); //PDO::FETCH_ASSOC
+                $result = $query->fetchAll(\PDO::FETCH_OBJ); //PDO::FETCH_ASSOCPDO::FETCH_OBJPDO
             }
             return $result;
         }

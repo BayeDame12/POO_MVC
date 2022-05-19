@@ -5,8 +5,8 @@ use App\Core\Controller;
 use App\Core\Request; 
 class SecurityController extends Controller{
     public function authentification(){
-        echo"BIENVENUE la methode d autentification ";   
-        echo"</br>";
+        // echo"BIENVENUE la methode d autentification ";   
+        // echo"</br>";
 
 
         //1.    AFFICHAGE DU FORMULAIRE DE CONNEXION PAR LA METHODE GET
@@ -21,8 +21,8 @@ class SecurityController extends Controller{
         // var_dump($this->request->isPost());
     }
     public function deconnexion(){
-        echo"BIENVENUE la methode deconnexion ";   
-        echo"</br>";
+        // echo"BIENVENUE la methode deconnexion ";   
+        // echo"</br>";
         // echo"BIENVENUE DANS L ACTION DECONNEXION";
         $this->redirectToRoute("login");       
     }

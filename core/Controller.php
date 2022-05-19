@@ -1,8 +1,8 @@
 <?php
 namespace App\Core;
 use App\Core\Request;
-echo"vous etes dans Controller";
-Echo"</br>";
+// echo"vous etes dans Controller";
+// Echo"</br>";
 
 class Controller{
 
@@ -12,8 +12,8 @@ protected Request $request;
         $this->request=$request;
     }
     public function render(string $path,array $data=[]){
-        echo"BIENVENUE la methode render ";   
-Echo"</br>";
+//         echo"BIENVENUE la methode render ";   
+// Echo"</br>";
 
         $data["Constantes"]=Constantes::class;
         $data["request"]=$this->request;
@@ -27,8 +27,8 @@ Echo"</br>";
 
     }
     public function redirectToRoute($uri){
-        echo"BIENVENUE la methode redirectToRoute ";   
-Echo"</br>";
+//         echo"BIENVENUE la methode redirectToRoute ";   
+// Echo"</br>";
         header ("location:".Constantes::WEB_ROOT.$uri);
 
     }

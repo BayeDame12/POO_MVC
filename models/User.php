@@ -39,7 +39,7 @@
         }
 
         public static function findUserByLoginAndPassword($login, $password):object|null{
-            return parent::findBy("select nom, prenom, login from personne where login = ? and password = ?", [$login, $password], true);
+            return parent::findBy("select nom_complet, login from personne where login = ? and password = ?", [$login, $password], true);
         }
 
         public static function findAll():array{

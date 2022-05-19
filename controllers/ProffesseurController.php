@@ -7,10 +7,6 @@ class ProffesseurController extends Controller{
 
     public function affecterClasse(){
 
-        echo"BIENVENUE la methode d affecterClasse ";  
-Echo"</br>";
-
         
     }
-
 }

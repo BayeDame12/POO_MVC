@@ -1,10 +1,20 @@
 <?php
 namespace App\Controller;
-
-echo"BIENVENUE DANS le controlleur peronne";   
-
-use App\Core\Controller;
+use App\Model\AC;
 use App\Core\Request;
+use App\Core\Controller;
+
 class PersonneController extends Controller{
+
+    public function listerPersonne(){
+
+        if ($this->request->isGet()) {
+            $donne=AC::findAll();
+
+            $this->render('personne/liste.html.php',["personne"=>$donne
+            ]);
+            }
+
+    }
 
 }

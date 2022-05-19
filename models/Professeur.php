@@ -38,9 +38,9 @@ Echo"</br>";
         public static function findAll():array{
             $db = parent::database();
             $db->connectionBD();
-                $sql = "SELECT id, prenom, nom, grade FROM ".parent::table()." WHERE role LIKE '".parent::role("ROLE_PROFESSEUR")."'";
+                $sql = "SELECT id_personne, nom_complet, grade FROM ".parent::table()." WHERE role LIKE '".parent::role("ROLE_PROFESSEUR")."'";
                 echo $sql;
-                die();
+                // die();
                 $results = $db->executeSelect($sql);
             $db->closeConnection();
             return $results;     
@@ -55,3 +55,5 @@ Echo"</br>";
             return $result;     
         }
     }
+
+

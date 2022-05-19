@@ -15,25 +15,22 @@
         //2eme approche
         //fonctions navigationnelles => fonctions issues des associations
         public function inscriptions():array{
-            echo"BIENVENUE la methode inscriptions ";   
-            Echo"</br>";
+         
             return [];
         }
       
         public static function findAll():array{   
-            echo"BIENVENUE la methode findAll ";   
-            Echo"</br>"; 
+            
             $db = parent::database();
             $db->connectionBD();
-                $sql = "SELECT id, prenom, nom, login, password FROM ".parent::table()." WHERE role LIKE '".parent::role("ROLE_AC")."'";
+                $sql = "SELECT id_personne, nom_complet, login, password FROM ".parent::table()." WHERE role LIKE '".parent::role("ROLE_AC")."'";
                 $results = $db->executeSelect($sql);
             $db->closeConnection();
             return $results;      
         }
 
         public function insert():int{
-            echo"BIENVENUE la methode insert ";   
-            Echo"</br>"; 
+          
             $db = parent::database();
             $db->connectionBD();
                 $sql = "INSERT INTO personne (`nom_complet`, `role`, `login`, `password`) VALUES ( ?, ?, ?, ?)";
