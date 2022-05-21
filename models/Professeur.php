@@ -1,5 +1,7 @@
 <?php
     namespace App\Model;
+    use App\Core\Model;
+
 Echo"</br>";
     class Professeur extends Personne{
         private string $grade;
@@ -7,8 +9,10 @@ Echo"</br>";
         public function __construct() {
             parent::$role = "ROLE_PROFFESSEUR";
             $this->inscriptions = [];
+    
+
         }
-        //many to many avec classe - Approche fonction navigationnelles
+        //many to many avec classe - Approche fonction navigationnelles 
         public function classes():array{
             return [];
         }
@@ -54,6 +58,8 @@ Echo"</br>";
             $db->closeConnection();
             return $result;     
         }
+
+        // $title=str_replace("lister","",$action);
     }
 
 

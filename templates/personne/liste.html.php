@@ -20,7 +20,7 @@
             <td><?=$p->role?></td>  
             <td><?=$p->login?></td>  
             <td>
-              <button class="btn btn-primary offset-3  btn-">ajouter</button>
+              <button class="btn btn-primary offset-3  btn-">modifier</button>
               <button class="btn btn-danger  offset-3 btn-">supprimer</button>
           
           </td>

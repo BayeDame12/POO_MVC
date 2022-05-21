@@ -13,4 +13,13 @@ $per->setlogin("dioufy@gmail.com");
 $per->setpassword("diouf1223",);
 $per->insert();
 
+<?php 
+class HtmlProvider{
+    public static function td(array $columns,array $rows) {
+        foreach($columns as $column){
+       $html.="td".$row->$column."td";
+        }
 
+
+}
+?>

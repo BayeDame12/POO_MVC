@@ -1,7 +1,5 @@
 <?php
     namespace App\Model; 
-    echo"vous etes dans ETUDIANT";
-
     class Etudiant extends User{
         private string $matricule;
         private string $adresse;

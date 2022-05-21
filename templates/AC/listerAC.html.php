@@ -2,7 +2,7 @@
 
 
 <table class="table">
-  <thead>
+  <thead class="border-5 bg-success ">
     <tr >
       <th scope="col">ID</th>
       <th scope="col">NOM_COMPLET</th>
@@ -21,7 +21,7 @@
             <td><?=$p->nom_complet?></td>  
             <td><?=$p->role?></td>  
             <td><?=$p->login?></td>  
-            <td><button class="btn btn-primary btn-">ajouter</button></td>
+            <td><button class="btn btn-primary btn-">modifier</button></td>
             <td><button class="btn btn-danger btn-">supprimer</button></td>
 
         </tr>     

@@ -16,13 +16,13 @@ class SecurityController extends Controller{
           $this->redirectToRoute("listerPersonne");
 
         }
-       
-      
     }
     public function deconnexion(){
         // echo"BIENVENUE la methode deconnexion ";   
         // echo"</br>";
         // echo"BIENVENUE DANS L ACTION DECONNEXION";
-        $this->redirectToRoute("login");       
+        $this->render('security/login.html.php');
+        
+        // $this->redirectToRoute("login");       
     }
 }

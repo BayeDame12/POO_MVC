@@ -3,6 +3,7 @@
 use App\Model\AC;
 use App\Model\Etudiant;
 use App\Model\Professeur;
+use App\Model\RP;
 
 /* require_once("../core/functions.php"); */
 
@@ -28,9 +29,10 @@ require_once ("../routes/route.web.php");
 // $per->setSexe("F");
 // $per->insert();
 
-// $per=new Professeur();
-// $per->setnomComplet("Maty Samb");
-// $per->setGrade("Ingenieur");
+// $per=new RP();
+// $per->setnomComplet("Cheikhou Diop");
+// $per->setlogin("Cheikhou@gamil.com");
+// $per->setpassword("Cheikhou");
 // $per->insert();
 
 //     INSERER AC                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

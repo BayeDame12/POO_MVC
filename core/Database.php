@@ -1,20 +1,17 @@
 <?php
     namespace App\Core;
 
-    // echo"vous etes dans Database";
-    // echo"</br>";
+   
     class Database {
         private \PDO|null $pdo=null;
           
         public function connectionBD():void{
-            // echo"BIENVENUE la methode connectionBD ";   
-            // echo"</br>";
+          
             $this->pdo = new \PDO("mysql:dbname=poo_inscription;host=127.0.0.1","root","");
                 // echo "connexion a la base reussit";
         }
         public function closeConnection():void{
-            // echo"BIENVENUE la methode closeConnection ";   
-            // echo"</br>";
+           
             $this->pdo = null;
         }
         public function executeSelect(string $sql, array $datas=[], bool $single = false):object|null|array{
