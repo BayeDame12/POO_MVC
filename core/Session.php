@@ -5,7 +5,18 @@ class Session{
 
      private User $user;
 public function __construct(){
-    // if( )
+	if (session_status() == PHP_SESSION_NONE){
+		session_start();
+	}
+}
+//Ajouter une donnees dans une session  
+public function getSession(string $key) {
+	return $_SESSION[$key];
+}
+//Modifier une donnees dans une session  
+
+public function setSession (string $key,$data){
+	$_SESSION[$key]=$data;
 }
 	/**
 	 * 
@@ -23,5 +34,8 @@ public function __construct(){
 	function setUser(User $user): self {
 		$this->user = $user;
 		return $this;
+	}
+	public static function is_connect(){
+     return isset($_SESSION['user-connect']);
 	}
 }

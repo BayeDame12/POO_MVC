@@ -1,6 +1,5 @@
-<?php
+<div class="<?=hiden(['ROLE_ETUDIANT'])?>">
 
-?>
 <h2 class="h2ListDesPersonne"><?=$titre?></h2>
 <table class="table">
   <thead class="border-5 bg-success ">
@@ -20,10 +19,12 @@
             <td ><?=$i++?></td>
             <td><?=$p->nom_complet?></td>  
             <td><?=$p->role?></td>  
-            <td><?=$p->grade?></td>  
+            <td><?=$p->grade?></td>    
             <td>
-              <button class="btn btn-primary offset-3  btn-">modifier</button>
-              <button class="btn btn-danger  offset-3 btn-">supprimer</button>         
+              <a href="/Proffesseur/<?=$p->id_personne?>" class="btn btn-secondary   btn-">detail</a>
+              <button class="btn btn-primary   btn-">modifier</button>
+
+              <button class="btn btn-danger  btn-">supprimer</button>         
           </td>
 
         </tr>     
@@ -31,3 +32,4 @@
 ?>
   </tbody>
 </table>
+</div>

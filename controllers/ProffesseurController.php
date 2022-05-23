@@ -15,4 +15,9 @@ class ProffesseurController extends Controller{
             
         }
     }
+    public function detail($idPROF){
+        var_dump("detail",$idPROF);
+    
+        die();
+    }
 }

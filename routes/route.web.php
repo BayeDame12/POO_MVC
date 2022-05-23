@@ -6,10 +6,12 @@ use App\Controller\PersonneController;
 use App\Controller\EtudiantController;
 use App\Controller\ProffesseurController;
 use App\Controller\RPController;
+use App\Controller\ACController;
+use App\Controller\moduleController;
 use App\Exception\RouteNotFoundException;
+
 // echo"vous etes dans WEB_ROOT";
 // Echo"</br>";
-
 $router=new Router();
 
 $router->route('/login',[SecurityController::class,"authentification"]);
@@ -17,9 +19,16 @@ $router->route('/logout',[SecurityController::class,"deconnexion"]);
 $router->route('/classes',[classController::class,"listerClasse"]);
 $router->route('/add-classe',[classController::class,"creerClasse"]);
 $router->route('/listerPersonne',[PersonneController::class,"listerPersonne"]);
+$router->route('/sup',[PersonneController::class,"supprimer"]);
 $router->route('/listerEtudiant',[EtudiantController::class,"listerEtudiant"]);
 $router->route('/listerProffesseur',[ProffesseurController::class,"listerProffesseur"]);
+$router->route('/Proffesseur',[ProffesseurController::class,"detail"]);
+
 $router->route('/listerRP',[RPController::class,"listerRP"]);
+$router->route('/listerAC',[RPController::class,"listerAC"]);
+$router->route('/',[RPController::class,"emptyAction"]);
+$router->route('/ins',[RPController::class,"inscription"]);
+$router->route('/acueil',[SecurityController::class,"acueil"]);
 
 //RESOLUTION DES ROUTES CETTE PARTIE CONSISTE A VERIFIER SI CETTE ROUTE EXISTE DANS LE TABLEAU
 try {

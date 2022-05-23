@@ -17,7 +17,7 @@
                     <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
                     <span class="h1 fw-bold mb-0 offset-3">CONNEXION</span>
                   </div>
-
+                   <h2 class="alert alert-danger">CONNECTER VOUS D ABORD</h2>
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
 
                   <div class="form-outline mb-4">

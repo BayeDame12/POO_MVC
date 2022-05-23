@@ -5,11 +5,13 @@
     class Request{
         // cette fonction permet de recuperer l'uri
         public function getUri(){
-            // echo"BIENVENUE la methode getUri ";   
-            // echo"</br>";
             //recuper l uri et le separer en fonction des /slash
             $url=explode("/",$_SERVER['REQUEST_URI']);
+            
+
             unset($url[0]);
+            // var_dump($url);
+            // die();
             //array value reorganiser les index et mes uri a la position 0
             return array_values($url);
         }
