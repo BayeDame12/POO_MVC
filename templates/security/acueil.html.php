@@ -1,4 +1,4 @@
-echo Role::nomPage();
+
 <?php
 
 use App\Core\Role;

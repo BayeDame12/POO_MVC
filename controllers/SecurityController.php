@@ -5,14 +5,12 @@ use App\Core\Controller;
 use App\Core\Request; 
 use App\Model\User;
 use App\Core\Constantes;
-
-use function App\Core\dd;
+use App\Core\dd;
 use App\Core\Role;
 
 class SecurityController extends Controller{
     public function authentification(){  
-// var_dump($param);
-// var_dump($param2);
+
 
         if ($this->request->isGet() ) {
         $this->render('security/login.html.php');
@@ -24,6 +22,7 @@ class SecurityController extends Controller{
                      # code...
             if ($user){
               $_SESSION['user-connect']=$user;
+            
               $this->redirectToRoute("acueil");
             }
         // $this->render('accueil/home.html.php');
@@ -47,4 +46,4 @@ class SecurityController extends Controller{
         // $this->redirectToRoute("login");       
     }
 }
-// echo Role::nomPage();
+

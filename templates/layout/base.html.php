@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -44,7 +43,7 @@
           </ul>
         </li>
 
-        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?>">">
+        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?>">
           <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             MODULE
           </a>
@@ -55,27 +54,25 @@
           </ul>
         </li>
 
-        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?>">">
+        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?>">
           <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             INSCRIPTION
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Liste Inscription</a></li>
-            <li><a class="dropdown-item" href="#">Liste Etudiant</a></li>
-            <li><a class="dropdown-item" href="#">Inscription</a></li>
-            <li><a class="dropdown-item" href="#">Reinscription</a></li>
-            <li><a class="dropdown-item" href="#">Annuler Inscription</a></li>
-            <li><a class="dropdown-item" href="#">Suspendre Inscription</a></li>
-
+          
+            <li><a class="dropdown-item" href="/listerEtudiant">Liste Etudiant</a></li>
+            <li><a class="dropdown-item" href="/Inscription">Inscription</a></li>
+            <li><a class="dropdown-item" href="/AnnulerInscription">Annuler Inscription</a></li>
+          
           </ul>
         </li>
-        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?>">">
+        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?>">
           <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             PROFFESEUR
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Ajouter Proffesseur</a></li>
-            <li><a class="dropdown-item" href="#">Lister Proffesseur</a></li>
+            <li><a class="dropdown-item" href="/addProffesseur">Ajouter Proffesseur</a></li>
+            <li><a class="dropdown-item " href="/listerProffesseur">Lister Proffesseur</a></li>
             
           </ul>
         </li>
@@ -88,14 +85,12 @@
     </div>
   </div>
 </nav>
-  
 
     <?=$content_for_views?>
         
        <script src="<?=$Constantes::WEB_ROOT.'js/script.js'?>"></script>
-       <script src="
-       https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js
-       "></script>
+       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 
 
 

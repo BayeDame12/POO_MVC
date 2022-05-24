@@ -17,4 +17,44 @@ class EtudiantController extends Controller{
 
     }
 
+    // public function Inscription(){
+
+    // $titre=`montitre`;
+
+    // if ($this->request->isGet()) {
+
+    //     $this->render('inscription/EtudiantAnnulerInscription.html.php');
+    // }
+
+    // }
+
+    public function AnnulerInscription(){
+
+
+     echo"salut AnnulerInscription";
+        
+    }
+//
+    public  function Inscription(){
+        if ($this->request->isPost()) {
+            extract($_POST);
+            // var_dump($_POST);
+            // die();
+            $proff=new Etudiant();
+            $proff->setnomComplet($nomComplet);
+            $proff->setLogin($login);
+            $proff->setPassword($password);
+            $proff->setAdresse($adresse);
+            $proff->setMatricule($matricule);
+            $proff->setSexe($sexe);
+
+           
+            $result=$proff->insert();   
+            $this->render('/inscription/Etudiant.inscription.html.php',["insert"=>$result]);
+
+        }
+        $this->render('/inscription/Etudiant.inscription.html.php');
+    }
+        
+
 }

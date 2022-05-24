@@ -21,12 +21,11 @@
             <td><?=$p->role?></td>  
             <td><?=$p->grade?></td>    
             <td>
-              <a href="/Proffesseur/<?=$p->id_personne?>" class="btn btn-secondary   btn-">detail</a>
-              <button class="btn btn-primary   btn-">modifier</button>
-
-              <button class="btn btn-danger  btn-">supprimer</button>         
+              <a href="/Proffesseur/<?=$p->id_personne?>" class="btn btn-secondary <?=hiden(['ROLE_RP'],true)?>">detail</a>
+              <a href="/Proffesseur/<?=$p->id_personne?>" class="btn btn-primary ">modifier</a>
+              <a href="/Proffesseur/<?=$p->id_personne?>" class="btn btn-danger ">supprimer</a>
+      
           </td>
-
         </tr>     
   <?php  }
 ?>

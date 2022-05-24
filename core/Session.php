@@ -24,8 +24,7 @@ public function setSession (string $key,$data){
 	 */
 	function getUser(): User {
 		return $this->user;
-	}
-	
+	}	
 	/**
 	 * 
 	 * @param User $user 

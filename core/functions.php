@@ -13,10 +13,10 @@ function showNav(){
   return !isset($_SESSION['user-connect'])?"d-none":"";
 }
 
-function hiden(array $except){
+function hiden(array $except,$hidden=true){
 foreach($except as $perConect){
 if(Role::getRole()==$perConect){
-  return "d-none";
+  return $hidden ? "d-none":"disabled";
 }
 }
 return "";

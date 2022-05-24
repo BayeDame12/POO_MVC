@@ -5,7 +5,7 @@
         <div class="card" style="border-radius: 1rem;">
           <div class="row g-0">
             <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <img src="<?=$Constantes::WEB_ROOT."images/3.jpeg"?>"
+              <img  src="<?=$Constantes::WEB_ROOT."images/3.jpeg"?>"
                 alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
             </div>
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
@@ -17,7 +17,7 @@
                     <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
                     <span class="h1 fw-bold mb-0 offset-3">CONNEXION</span>
                   </div>
-                   <h2 class="alert alert-danger">CONNECTER VOUS D ABORD</h2>
+                   <!-- <h2 class="alert alert-danger">CONNECTER VOUS D ABORD</h2> -->
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
 
                   <div class="form-outline mb-4">
@@ -29,14 +29,8 @@
                     <input type="password" id="form2Example27"name="password" class="form-control form-control-lg" />
                   </div>
                   <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block offset-4" type="submit">CONNEXION</button>
+                    <button class="btn btn-dark btn-lg btn-block offset-4" type="submit">Connexion</button>
                   </div>
-
-                  <!-- <a class="small text-muted" href="#!">Forgot password?</a>
-                  <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="#!"
-                      style="color: #393f81;">Register here</a></p> -->
-                  <!-- <a href="#!" class="small text-muted">Terms of use.</a>
-                  <a href="#!" class="small text-muted">Privacy policy</a> -->
                 </form>
               </div>
             </div>

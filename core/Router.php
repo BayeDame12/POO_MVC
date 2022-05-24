@@ -5,7 +5,6 @@ namespace App\Core;
     use App\Core\Session;
     use App\Exception\RouteNotFoundException;
 
-
     class Router{
         private Request $request;
         public function __construct()
@@ -26,9 +25,6 @@ namespace App\Core;
             $params=$this->request->getUri();
             unset($params[0]);
             $params=count($params)>=1? array_values($params):[];
-            // $params=implode(",",$params);
-            
-
             
             if (isset($this->routes[$uri])) {
                 [$ctrClass,$action]=$this->routes[$uri];  
@@ -46,7 +42,6 @@ namespace App\Core;
                     elseif(Session::is_connect()){
                         // $ctrl->$action($params); 
                         call_user_func_array([$ctrl, $action],$params);
-
                                             }
                     else{
                         // throw new RouteNotFoundException();                   
