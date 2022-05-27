@@ -10,6 +10,7 @@ if(isset($insert) && $insert==1) {
 <div class="d-flex align-items-center mb-3 pb-1">
   <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
   <span class="h1 fw-bold mb-0 offset-3">AJOUTER PROFFESSEUR</span>
+  
 </div>
  <!-- <h2 class="alert alert-danger">CONNECTER VOUS D ABORD</h2> -->
 <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
@@ -32,6 +33,6 @@ if(isset($insert) && $insert==1) {
 </div>
 
 <div class="pt-1 mb-4">
-  <button class="btn btn-dark btn-lg btn-block offset-4" type="submit">AJOUTER</button>
+  <button class="btn btn-dark btn-lg btn-block offset-4" type="submit">AJOUTER PROFFESSEUR</button>
 </div>
 </form>

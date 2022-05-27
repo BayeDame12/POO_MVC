@@ -44,7 +44,7 @@ Echo"</br>";
             
             $db = parent::database();
             $db->connectionBD();
-                $sql = "SELECT id_personne, nom_complet, role, grade FROM ".parent::table()." WHERE role LIKE '".parent::role("ROLE_PROFFESSEUR")."'";
+                $sql = "SELECT * FROM ".parent::table()." WHERE role LIKE '".parent::role("ROLE_PROFFESSEUR")."'";
                 $results = $db->executeSelect($sql);
             $db->closeConnection();
             return $results;      

@@ -56,19 +56,18 @@
             $db = self::database();
             $db->connectionBD();
             //requete préparée, var injectée lors de l'exéxution de la requête, var remplacée par un joker, 1st joker pos -0, 2nd joker pos 1
-                $sql = "DELETE FROM ".self::table()." WHERE id = ?";
+                $sql = "DELETE FROM ".self::table()." WHERE id_personne = ?";
                 $result = $db->executeUpdate($sql, [$id]);
             $db->closeConnection();
             return $result;
         }
         
-        public static function findById(int $id):object|null{
-            echo"BIENVENUE la methode findById ";   
-            echo"</br>";
+        public static function findById(int $id_personne):object|null{
+
             $db = self::database();
             $db->connectionBD();
-                $sql = "SELECT * FROM ".self::table()." WHERE id = ?";
-                $result = $db->executeSelect($sql, [$id]);
+                $sql = "SELECT * FROM ".self::table()." WHERE id_personne = ?";
+                $result = $db->executeSelect($sql, [$id_personne],true);
             $db->closeConnection();
             return $result; 
         }

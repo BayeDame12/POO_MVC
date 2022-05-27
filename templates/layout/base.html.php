@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
         <link href="<?=$Constantes::WEB_ROOT.'css/js.css'?>" rel="stylesheet">
     </head>
     <body>
-      <nav class="navbar navbar-expand-lg bg-black <?= showNav()?>">
+      <nav class="navbar navbar-expand-lg bg-secondary <?= showNav()?>">
   <div class="container-fluid">
    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,20 +18,31 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-     
-        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?>">
-          <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+      <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?> <?=hiden(['ROLE_AC'])?>">
+          <a class="nav-link dropdown-toggle text-dark " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            AC
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/listerAC">Lister AC</a></li>
+            <li><a class="dropdown-item" href="/addAC">Ajouter AC </a></li>
+            
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?> <?=hiden(['ROLE_AC'])?>">
+          <a class="nav-link dropdown-toggle text-dark " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             CLASS
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Lister Classe</a></li>
-            <li><a class="dropdown-item" href="#">Ajouter Classe </a></li>
+            <li><a class="dropdown-item" href="/listerClasse">Lister Classe</a></li>
+            <li><a class="dropdown-item" href="/addClasse">Ajouter Classe </a></li>
             
           </ul>
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-dark " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             DEMANDE
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -43,8 +54,8 @@
           </ul>
         </li>
 
-        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?>">
-          <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?> <?=hiden(['ROLE_AC'])?>">
+          <a class="nav-link dropdown-toggle text-dark " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             MODULE
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -54,20 +65,20 @@
           </ul>
         </li>
 
-        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?>">
-          <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?> <?=hiden(['ROLE_RP'])?>">
+          <a class="nav-link dropdown-toggle text-dark " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             INSCRIPTION
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           
-            <li><a class="dropdown-item" href="/listerEtudiant">Liste Etudiant</a></li>
-            <li><a class="dropdown-item" href="/Inscription">Inscription</a></li>
+            <li><a class="dropdown-item" href="/listerEtudiant ">Liste Etudiant</a></li>
+            <li><a class="dropdown-item" href="/InscriptionEtudiant ">InscriptionEtudiant</a></li>
             <li><a class="dropdown-item" href="/AnnulerInscription">Annuler Inscription</a></li>
           
           </ul>
         </li>
-        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?>">
-          <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?> <?=hiden(['ROLE_AC'])?>">
+          <a class="nav-link dropdown-toggle text-dark " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             PROFFESEUR
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

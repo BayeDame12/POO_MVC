@@ -25,9 +25,9 @@ namespace App\Core;
             $params=$this->request->getUri();
             unset($params[0]);
             $params=count($params)>=1? array_values($params):[];
-            
             if (isset($this->routes[$uri])) {
                 [$ctrClass,$action]=$this->routes[$uri];  
+         
                 if (class_exists($ctrClass) && method_exists($ctrClass,$action)) {   
                     $ctrl=new $ctrClass($this->request); 
                     // (*)=mode dev
@@ -48,7 +48,9 @@ namespace App\Core;
                         // call_user_func(array($ctrl,$action)); 
                         header('location:login') ;
                     }
-                    $ctrl->$action(); 
+                    // $ctrl->$action([$params]); 
+                    call_user_func_array([$ctrl, $action],$params);
+
                     $free= ["SecurityController/authentification"];
                 }
                 else {

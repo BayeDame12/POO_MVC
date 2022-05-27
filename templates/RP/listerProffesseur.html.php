@@ -9,6 +9,8 @@
       <th scope="col">ROLE</th>
       <th scope="col" >GRADE</th>
       <th scope="col" class="text-center">ACTION</th>      
+  <button class="btn btn-success  "><a class="dropdown-item text-white " href="/addProffesseur">Ajouter Proffesseur</a></button>
+
     </tr>
   </thead>
   <tbody>
@@ -21,9 +23,9 @@
             <td><?=$p->role?></td>  
             <td><?=$p->grade?></td>    
             <td>
-              <a href="/Proffesseur/<?=$p->id_personne?>" class="btn btn-secondary <?=hiden(['ROLE_RP'],true)?>">detail</a>
-              <a href="/Proffesseur/<?=$p->id_personne?>" class="btn btn-primary ">modifier</a>
-              <a href="/Proffesseur/<?=$p->id_personne?>" class="btn btn-danger ">supprimer</a>
+              <a href="/detail/<?=$p->id_personne?>" class="btn btn-secondary ">detail</a>
+              <a href="/modifier/<?=$p->id_personne?>" class="btn btn-primary ">modifier</a>
+              <a href="/supprimer/<?=$p->id_personne?>" class="btn btn-danger ">supprimer</a>
       
           </td>
         </tr>     

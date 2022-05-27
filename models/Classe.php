@@ -1,7 +1,8 @@
 <?php
+
+namespace App\Model;
     namespace App\Model;
     use App\Core\Model;
-    echo"vous etes dans CLASSE";
 
     class Classe extends Model  {
         private int $id;
@@ -63,6 +64,25 @@
             $this->niveau = $niveau;
             return $this;
         }
+
+        public function insert():int{
+            $db = parent::database();
+            $db->connectionBD();
+                $sql = "INSERT INTO classe (`filiere`, `niveau`, `libelle`) VALUES (?, ?, ?)";
+                $result = $db->executeUpdate($sql, [$this->filiere, $this->niveau,  $this->libelle]);
+            $db->closeConnection();
+            return $result;     
+        }
+        public static function findAll():array{   
+            
+            $db = parent::database();
+            $db->connectionBD();
+            $sql = "SELECT * FROM ".parent::table();
+
+                $results = $db->executeSelect($sql);
+            $db->closeConnection();
+            return $results;      
+        }  
     }
 
 
