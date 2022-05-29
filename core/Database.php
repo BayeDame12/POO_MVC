@@ -30,12 +30,10 @@
         }
 
         public function executeUpdate(string $sql, array $datas=[]):int{
-            // echo"BIENVENUE la methode executeUpdate ";   
-            // echo"</br>";
             $query = $this->pdo->prepare($sql);
             $query->execute($datas);
             // insert -> retourner le dernier Id inséré
-            return $query->rowCount(); 
+            return $query->rowCount()>=1 ? $this->pdo->lastInsertId() : $query->rowCount() ;
         }
     }
     $per=new Database();

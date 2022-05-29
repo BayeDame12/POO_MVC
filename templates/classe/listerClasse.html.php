@@ -1,7 +1,7 @@
 <h2 class="h2ListDesClasse"><?=$titre?></h2>
 
 <table class="table">
-  <thead class="border-5 bg-secondary ">
+  <thead class="border-5 bg-secondary text-white">
     <tr ">
       <th scope="col">#ID</th>
       <th scope="col">FILLIERE</th>
@@ -17,7 +17,7 @@
 
     $i = 1;
     foreach ($classe as $p){?>
-        <tr>        
+        <tr class="text-white">        
         
             <td><?=$i++?></td>
             <td><?=$p->filiere?></td> 

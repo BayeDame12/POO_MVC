@@ -1,9 +1,9 @@
 <div class="<?=hiden(['ROLE_ETUDIANT'])?>">
 
-<h2 class="h2ListDesPersonne"><?=$titre?></h2>
+<h2 class="h2ListDesPersonne "><?=$titre?></h2>
 <table class="table">
-  <thead class="border-5 bg-success ">
-    <tr class="border-5">
+  <thead class="border-5 bg-success text-white">
+    <tr class="border-5 text-white">
       <th scope="col">ID</th>
       <th scope="col">NOM_COMPLET</th>
       <th scope="col">ROLE</th>
@@ -17,12 +17,12 @@
     <?php
     $i = 1;
     foreach ($proffesseur as $p){?>
-        <tr class="border-5 ">        
+        <tr class="border-5 text-white  ">        
             <td ><?=$i++?></td>
             <td><?=$p->nom_complet?></td>  
             <td><?=$p->role?></td>  
             <td><?=$p->grade?></td>    
-            <td>
+            <td >
               <a href="/detail/<?=$p->id_personne?>" class="btn btn-secondary ">detail</a>
               <a href="/modifier/<?=$p->id_personne?>" class="btn btn-primary ">modifier</a>
               <a href="/supprimer/<?=$p->id_personne?>" class="btn btn-danger ">supprimer</a>

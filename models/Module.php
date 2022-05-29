@@ -1,10 +1,17 @@
 <?php
-    namespace App\Model;
-    echo"vous etes dans MODULE";
+   namespace App\Model;
+//    use App\Core\Controller;
+//    use App\Core\Request;
+//    use App\Model\AC;
+//    use App\Model\RP;
+//    use App\Model\Etudiant;
+//    use App\Model\Inscription;
+//    use App\Model\Module;
+   
 
     class Module{
         private int $id;
-        private string $nom;
+        private string $libelle;
         private string $etat;
 
         //many to many avec professeurs - Approche fonction navigationnelles
@@ -30,12 +37,12 @@
 
         public function getNom()
         {
-            return $this->nom;
+            return $this->libelle;
         }
 
         public function setNom($nom):self
         {
-            $this->nom = $nom;
+            $this->libelle = $nom;
             return $this;
         }
 
@@ -49,4 +56,22 @@
             $this->etat = $etat;
             return $this;
         }
+        // public static function insert():int{
+        //     $db = parent::database();
+        //     $db->connectionBD();
+        //     $sql = "INSERT INTO classe (`id_module`, `libelle`, `etat`) VALUES (?, ?, ?)";
+        //     $result = $db->executeUpdate($sql, [$id, $libelle,  $etat]);
+        //     $db->closeConnection();
+        //     return $result;     
+        // }
+        // public static function findAll():array{   
+            
+        //     $db = parent::database();
+        //     $db->connectionBD();
+        //     $sql = "SELECT * FROM ".parent::table();
+            
+        //         $results = $db->executeSelect($sql);
+        //         $db->closeConnection();
+        //         return $results;      
+        //     }  
     }

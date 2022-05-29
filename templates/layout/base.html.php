@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>BIENVENUE SUR MA PAGE DE CONNEXION</title>
-        <link href="<?=$Constantes::WEB_ROOT.'css/bootstrap.css'?>" rel="stylesheet">  
+        <link href="<?=$Constantes::WEB_ROOT.'css/bootstrap1.css'?>" rel="stylesheet">  
         <link href="<?=$Constantes::WEB_ROOT.'CSS/Style.css'?>" rel="stylesheet">  
         <link href="<?=$Constantes::WEB_ROOT.'css/js.css'?>" rel="stylesheet">
     </head>
@@ -19,13 +19,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-      <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?> <?=hiden(['ROLE_AC'])?>">
+      <li class="nav-item dropdown text-white <?=hiden(['ROLE_ETUDIANT'])?> <?=hiden(['ROLE_AC'])?>">
           <a class="nav-link dropdown-toggle text-dark " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             AC
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/listerAC">Lister AC</a></li>
-            <li><a class="dropdown-item" href="/addAC">Ajouter AC </a></li>
+            <li><a class="dropdown-item text-white" href="/listerAC">Lister AC</a></li>
+            <li><a class="dropdown-item text-white" href="/addAC">Ajouter AC </a></li>
             
           </ul>
         </li>
@@ -35,8 +35,8 @@
             CLASS
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/listerClasse">Lister Classe</a></li>
-            <li><a class="dropdown-item" href="/addClasse">Ajouter Classe </a></li>
+            <li><a class="dropdown-item text-white" href="/listerClasse">Lister Classe</a></li>
+            <li><a class="dropdown-item text-white" href="/addClasse">Ajouter Classe </a></li>
             
           </ul>
         </li>
@@ -46,10 +46,10 @@
             DEMANDE
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Lister Demande</a></li>
-            <li><a class="dropdown-item" href="#">Faire Une Demande </a></li>
-            <li><a class="dropdown-item" href="#">Annuler Demande</a></li>
-            <li><a class="dropdown-item" href="#">Suspention Demande</a></li>
+            <li><a class="dropdown-item text-white" href="#">Lister Demande</a></li>
+            <li><a class="dropdown-item text-white" href="#">Faire Une Demande </a></li>
+            <li><a class="dropdown-item text-white" href="#">Annuler Demande</a></li>
+            <li><a class="dropdown-item text-white" href="#">Suspention Demande</a></li>
 
           </ul>
         </li>
@@ -59,21 +59,20 @@
             MODULE
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item text-white" href="/addModule">Ajouter Module</a></li>
+            <li><a class="dropdown-item text-white" href="/listerModule">lister Module</a></li>
           </ul>
         </li>
 
-        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT'])?> <?=hiden(['ROLE_RP'])?>">
+        <li class="nav-item dropdown <?=hiden(['ROLE_ETUDIANT','ROLE_RP'])?>">
           <a class="nav-link dropdown-toggle text-dark " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             INSCRIPTION
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           
-            <li><a class="dropdown-item" href="/listerEtudiant ">Liste Etudiant</a></li>
-            <li><a class="dropdown-item" href="/InscriptionEtudiant ">InscriptionEtudiant</a></li>
-            <li><a class="dropdown-item" href="/AnnulerInscription">Annuler Inscription</a></li>
+            <li><a class="dropdown-item text-white" href="/listerEtudiant ">Liste Etudiant</a></li>
+            <li><a class="dropdown-item text-white" href="/InscriptionEtudiant ">InscriptionEtudiant</a></li>
+            <li><a class="dropdown-item text-white" href="/AnnulerInscription">Annuler Inscription</a></li>
           
           </ul>
         </li>
@@ -82,15 +81,15 @@
             PROFFESEUR
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/addProffesseur">Ajouter Proffesseur</a></li>
-            <li><a class="dropdown-item " href="/listerProffesseur">Lister Proffesseur</a></li>
+            <li><a class="dropdown-item text-white" href="/addProffesseur">Ajouter Proffesseur</a></li>
+            <li><a class="dropdown-item text-white " href="/listerProffesseur">Lister Proffesseur</a></li>
             
           </ul>
         </li>
        
       </ul>
-      <button class="btn btn-outline " type="submit">
-        <a class="nav-link fw-bold mb-0 border  text-white" aria-current="page" href="logout">DECONNEXION</a>
+      <button class="btn btn-light" type="submit">
+        <a class="nav-link fw-bold mb-0 border  text-blaxk" aria-current="page" href="logout">DECONNEXION</a>
       </button>
      
     </div>

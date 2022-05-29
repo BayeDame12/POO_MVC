@@ -6,15 +6,17 @@ if(isset($insert) && $insert==1) {
 }
 
 ?>
-<div class="d-flex align-items-center mb-3 pb-1">
+<div class="container-fluid col-4 bg-secondary mt-3 text-dark ">
+
+<div class="d-flex align-items-center  pb-1">
   <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
-  <span class="h1 fw-bold mb-0 offset-3">AJOUTER AC</span>
+  <span class="h1 fw-bold mb-0 offset-3 text-dark">AJOUTER AC</span>
   
 </div>
  <!-- <h2 class="alert alert-danger">CONNECTER VOUS D ABORD</h2> -->
-<h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+<h5 class="fw-normal  pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
 
-<div class="form-outline mb-4">
+<div class="form-outline mb-4 text-secondary">
   <label class="form-label" for="form2Example17">NOM_COMPLET </label>
   <input type="text" id="form2Example17" name="nom" placeholder="veiller sair le nom complet de l attache" class="form-control form-control-lg" />
 </div>
@@ -31,3 +33,4 @@ if(isset($insert) && $insert==1) {
   <button class="btn btn-dark btn-lg btn-block offset-4" type="submit">AJOUTER AC</button>
 </div>
 </form>
+</div>

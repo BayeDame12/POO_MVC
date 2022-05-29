@@ -1,7 +1,7 @@
 <h2 class="h2ListDesEtudiants"><?=$titre?></h2>
 
 <table class="table">
-  <thead class="border-5 bg-success ">
+  <thead class="border-5 bg-success text-white">
     <tr ">
       <th scope="col">#ID</th>
       <th scope="col">NOM_COMPLET</th>
@@ -9,6 +9,9 @@
       <th scope="col">LOGIN</th>
       <th scope="col">MATRICULE</th>
       <th scope="col">ADRESSE</th>
+      <th scope="col">CLASSE</th>
+      <th scope="col">ANNEE_SCOLAIRE</th>
+
       <th scope="col">ACTION</th>
   <button class="btn btn-success  "><a class="dropdown-item text-white " href="/InscriptionEtudiant">Ajouter Etudiant</a></button>
 
@@ -19,7 +22,7 @@
 
     $i = 1;
     foreach ($AC as $p){?>
-        <tr>        
+        <tr class="text-white"  >        
         
             <td><?=$i++?></td>
             <td><?=$p->nom_complet?></td> 
@@ -27,6 +30,8 @@
             <td><?=$p->login?></td> 
             <td><?=$p->matricule?></td> 
             <td><?=$p->adresse?></td> 
+     
+
 
             <td>
             <a href="/Etudiant/<?=$p->id_personne?>" class="btn btn-secondary btn-">detail</a>

@@ -33,8 +33,9 @@
             return 0;
         }
         public function update():int{
-            echo"BIENVENUE la methode update ";   
-            echo"</br>";
+           
+
+            
             return 0;
         }
 
@@ -50,14 +51,12 @@
             return $result;        
         }
 
-        public static function delete(int $id):int{
-            echo"BIENVENUE la methode delete ";   
-            echo"</br>";
+        public static function delete(int $id_personne):int{
             $db = self::database();
             $db->connectionBD();
             //requete préparée, var injectée lors de l'exéxution de la requête, var remplacée par un joker, 1st joker pos -0, 2nd joker pos 1
                 $sql = "DELETE FROM ".self::table()." WHERE id_personne = ?";
-                $result = $db->executeUpdate($sql, [$id]);
+                $result = $db->executeUpdate($sql, [$id_personne]);
             $db->closeConnection();
             return $result;
         }

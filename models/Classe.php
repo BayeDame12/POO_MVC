@@ -1,21 +1,21 @@
 <?php
 
 namespace App\Model;
-    namespace App\Model;
-    use App\Core\Model;
+use App\Core\Model;
 
     class Classe extends Model  {
+        
         private int $id;
         private string $libelle;
         private string $filiere;
         private string $niveau;
-
+        
         //many to many avec professeur - Approche fonction navigationnelles
         public function professeurs():array|null{
             $sql = "SELECT *... ";
             return parent::findBy($sql, [$this->id]);
         }
-
+        
         //many to one avec RP - plusieurs classes ajoutees par 1 RP
          public function RP():RP{
             return new RP();
@@ -25,24 +25,24 @@ namespace App\Model;
         {
             return $this->id;
         }
-
+        
         public function setId($id):self
         {
             $this->id = $id;
             return $this;
         }
-
+        
         public function getLibelle()
         {
             return $this->libelle;
         }
-
+        
         public function setLibelle($libelle):self
         {
             $this->libelle = $libelle;
             return $this;
         }
-
+        
         public function getFiliere()
         {
             return $this->filiere;
@@ -64,12 +64,12 @@ namespace App\Model;
             $this->niveau = $niveau;
             return $this;
         }
-
+        
         public function insert():int{
             $db = parent::database();
             $db->connectionBD();
-                $sql = "INSERT INTO classe (`filiere`, `niveau`, `libelle`) VALUES (?, ?, ?)";
-                $result = $db->executeUpdate($sql, [$this->filiere, $this->niveau,  $this->libelle]);
+            $sql = "INSERT INTO classe (`filiere`, `niveau`, `libelle`) VALUES (?, ?, ?)";
+            $result = $db->executeUpdate($sql, [$this->filiere, $this->niveau,  $this->libelle]);
             $db->closeConnection();
             return $result;     
         }
@@ -78,19 +78,13 @@ namespace App\Model;
             $db = parent::database();
             $db->connectionBD();
             $sql = "SELECT * FROM ".parent::table();
-
+            
                 $results = $db->executeSelect($sql);
-            $db->closeConnection();
-            return $results;      
-        }  
-    }
-
-
-
-
-
-
-
-
-
+                $db->closeConnection();
+                return $results;      
+            }  
+            
+        }
+        
+        
 

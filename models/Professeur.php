@@ -59,6 +59,15 @@ Echo"</br>";
             return $result;     
         }
 
+        public function update():int{
+            $db = parent::database();
+            $db->connectionBD();
+                $sql = "UPDATE personne SET nom_complet = ? , grade = ? WHERE id_personne = ?";
+                $result = $db->executeUpdate($sql, [$this->nomComplet,  $this->grade, $this->id]);
+            $db->closeConnection();
+            return $result;     
+        }
+
         
 
         // $title=str_replace("lister","",$action);

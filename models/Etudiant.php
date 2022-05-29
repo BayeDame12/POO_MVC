@@ -64,5 +64,38 @@
             $db->closeConnection();
             return $result;     
         }
+
+
+        public static function inscrir($etudiant_id, $ac_id,$classe,$annee_id,):int{
+            $db = parent::database();
+            $db->connectionBD();
+                $sql = "INSERT INTO inscription (`etudiant_id`, `ac_id`, `classe_id`, `annee_scolaire_id`) VALUES (?, ?, ?, ?)";
+                $result = $db->executeUpdate($sql, [$etudiant_id,  $ac_id,  $classe,  $annee_id]);
+            $db->closeConnection();
+            return $result;     
+        }
+        protected int $id;
+
+        //Many to One avec AC | plusieurs insc 1 AC
+        public function ac():AC{
+            $sql = "SELECT p.* 
+                    FROM inscription i, personne p
+                    WHERE p.id = i.ac_id
+                    AND p.role LIKE 'ROLE_AC'
+                    AND i.id = ? ";
+            return parent::findBy($sql, [$this->id]);
+        }
+
+        //Many to One avec annee
+        public function anneeScolaire():Annee{
+            $sql = "SELECT p.* 
+                    FROM inscription i, annee a
+                    WHERE a.id = i.annee_id
+                    AND i.id = ?";
+            return parent::findBy($sql, [$this->id]);
+        }
+
+
+        
     }
     

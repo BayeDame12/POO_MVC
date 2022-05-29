@@ -24,11 +24,13 @@
                   <div class="form-outline mb-5">
                     <label class="form-label" for="form2Example17"> Nom complet</label>
                     <input type="text" id="form2Example17" name="nomComplet" placeholder="veiller saisir votre Nom complet" class="form-control form-control-lg" />
+                  
+                    <label class="form-label" for="form2Example17">Email address</label>
+                    <input type="email" id="form2Example17" name="login" placeholder="veiller saisir votre email" class="form-control form-control-lg" />
                   </div>
 
                   <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example17">Email address</label>
-                    <input type="email" id="form2Example17" name="login" placeholder="veiller saisir votre email" class="form-control form-control-lg" />
+                   
                   </div>
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form2Example27">Password</label>
@@ -46,32 +48,41 @@
                   </div>
                   <div class="input-group d-flex">
 
+                  <div class="form-outline mb-4 text-dark ">
+                       <label class="form-label" for="form2Example17 text-dark">classe </label>
+                       <select name="grade" class="form-select text-white" value="<?= $prof->grade ?>" >
+                         <option value="0">Selectioner une classe</option>
+                         <option value="ECOMA">ECOMA</option>
+                         <option value="IJ">IJ</option>
+                         <option value="SRT">SRT</option>
+                         <option value="W2A">W2A</option>
+                         <option value="MPCI">MPCI</option>
+                         <option value="MRO">MRO</option>
+                         <option value="SACOM">SACOM</option>
+
+                       </select>
+                </div>  
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example17">Annee Scolaire</label>
+                    <input type="text" id="form2Example17" name="annee" placeholder="veiller saisir votre annee" class="form-control form-control-lg" />
+                  </div>
+
 
                   <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example27">Sexe</label>
-                  <!-- </div> -->
-                  <div class="input-group d-flex"></div>
-
-                  <label class="form-label" for="form2Example17">Sexe</label>        
-                  <label class="radio-container m-r-45">Male
-                  <input type="radio" checked="checked" value="M" name="sexe">
-                  <span class="checkmark"></span>
+                  <label class="form-label" for="form2Example27">Sexe</label>
+                  <label class="radio-container m-r-45">M
+                    <input type="radio" checked="checked" value="M" name="sexe">
+                    <span class="checkmark"></span>
                   </label>
-                  <label class="radio-container">Female
-                  <input type="radio" value="F" name="sexe">
-                  <span class="checkmark"></span>
+                  <label class="radio-container">F
+                    <input type="radio" value="F" name="sexe">
+                    <span class="checkmark"></span>
                   </label>
-                  
                   <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block offset-4" type="submit">S'inscrir</button>
+                    <button  class="btn btn-light">S'inscrir</button>
                   </div>
                   </div>
                   </div>
-
-
-                  
-               
-                 
 
                 </form>
               </div>

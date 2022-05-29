@@ -4,54 +4,57 @@ use App\Model\AC;
 use App\Core\Request;
 use App\Core\Controller;
 use App\Model\Etudiant;
+use App\Model\Inscription;
 
 class ACController extends Controller{
 
-//********************************LISTER ETUDIANTS********************************
-    public function listerEtudiant(){
-        $titre=`AC`;
-       
-               if ($this->request->isGet()) {
-                   $donne=Etudiant::findAll();   
-                   $this->render('AC/listerEtudiant.html.php',["AC"=>$donne,"titre"=>$titre]);
-               }
-           }
-
-       
-           public function AnnulerInscription(){
-       
-       
-               
+    //********************************AJOUTER AC********************************
+    public  function addAC(){
+        if ($this->request->isPost()) {
+            extract($_POST);
+            $ac=new AC();
+            $ac->setnomComplet($nom);
+            $ac->setLogin($login);
+            $ac->setPassword($password);
+            $result=$ac->insert(); 
+            $_POST=[];
+            $this->redirectToRoute('listerAC');
         }
-        //********************************INSCRIPTION ETUDIANTS********************************
-        
-        public  function InscriptionEtudiant(){
-               if ($this->request->isPost()) {
-                   extract($_POST);
-                  
-                   $Etu=new Etudiant();
-                   $Etu->setnomComplet($nomComplet);
-                   $Etu->setLogin($login);
-                   $Etu->setPassword($password);
-                   $Etu->setAdresse($adresse);
-                   $Etu->setMatricule($matricule);
-                   $Etu->setSexe($sexe);
-                   $result=$Etu->insert();   
-                   $_POST=[];                 
-                   $this->redirectToRoute('listerEtudiant');
-               }
-               else {
-                # code...
-                $this->render('/AC/Etudiant.inscription.html.php');
-               }
-           }
-           public function supprimer(int $id_personne){
-               $titre=`montitre`;
-               $detailProff=Etudiant::delete($id_personne);
-               
-               $this->render('/inscription/Etudiant.inscription.html.php',["Etudiant"=>$detailProff,"titre"=>$titre]);            
-           }
+        else{
+            $this->render('/AC/addAC.html.php');
+        }
+    }
+//********************************LISTER AC********************************
 
+    public function listerAC(){
+        
+        $titre=`AC`;
     
+        if ($this->request->isGet()) {
+            $donne=AC::findAll();
+            $this->render('AC/listerAC.html.php',["RP"=>$donne,"titre"=>$titre
+        ]);
+    }
+    
+}
+public function detailAC(int $id_personne){
+    $detailAC=AC::findById($id_personne);
+    $titre=($detailAC->nom_complet);
+    $login=($detailAC->login); 
+    
+    
+    $this->render('AC/detailAC.html.php',["titre"=>$titre,"grade"=>$login]);
+   
+}
+public function modifierAC(int $id_personne){
+    $detailAC=AC::findById($id_personne);
+     $this->render('AC/addAC.html.php',["prof" => $detailAC]);  
+} 
+
+public function supprimerAC(int $id_personne){
+    $titre=`montitre`;
+    $detailAC=AC::delete($id_personne);
+    $this->render('AC/listerAC.html.php',["proffesseur"=>$detailAC,"titre"=>$titre]);            
+}
 
 }

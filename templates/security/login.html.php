@@ -15,21 +15,21 @@
 
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
-                    <span class="h1 fw-bold mb-0 offset-3">CONNEXION</span>
+                    <span class="h1 fw-bold mb-0 offset-3 text-white">CONNEXION</span>
                   </div>
                    <!-- <h2 class="alert alert-danger">CONNECTER VOUS D ABORD</h2> -->
-                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+                  <h5 class="fw-normal mb-3 pb-3 text-white" style="letter-spacing: 1px;">Sign into your account</h5>
 
                   <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example17">Email address</label>
+                    <label class="form-label text-white" for="form2Example17">Email address</label>
                     <input type="email" id="form2Example17" name="email" placeholder="Email" class="form-control form-control-lg" />
                   </div>
                   <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example27">Password</label>
+                    <label class="form-label text-white" for="form2Example27">Password</label>
                     <input type="password" id="form2Example27"name="password" class="form-control form-control-lg" />
                   </div>
                   <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block offset-4" type="submit">Connexion</button>
+                    <button class=" nav-link fw-bold mb-0 border  text-blaxk btn-lg  offset-4" type="submit">Connexion</button>
                   </div>
                 </form>
               </div>

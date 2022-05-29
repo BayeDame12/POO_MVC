@@ -8,6 +8,8 @@ use App\Controller\ProffesseurController;
 use App\Controller\RPController;
 use App\Controller\ACController;
 use App\Controller\moduleController;
+use App\Controller\ClasseController;
+use App\Controller\DemandeController;
 use App\Exception\RouteNotFoundException;
 
 $router=new Router();
@@ -17,39 +19,44 @@ $router->route('/login',[SecurityController::class,"authentification"]);
 $router->route('/logout',[SecurityController::class,"deconnexion"]);
 //CLASSES
 $router->route('/listerPersonne',[RPController::class,"listerPersonne"]);
-$router->route('/sup',[RPController::class,"supprimer"]);
+
 //RP
 //**********addAC********** */
-$router->route('/addAC',[RPController::class,"addAC"]);
+$router->route('/addAC',[ACController::class,"addAC"]);
 //**********listerAC********** */
-$router->route('/listerAC',[RPController::class,"listerAC"]);
-//**********addClasse********** */
-$router->route('/addClasse',[RPController::class,"addClasse"]);
-//**********listerClasse********** */
-$router->route('/listerClasse',[RPController::class,"listerClasse"]);
+$router->route('/listerAC',[ACController::class,"listerAC"]);
+$router->route('/detailAC',[ACController::class,"detailAC"]);
+$router->route('/modifierAC',[ACController::class,"modifierAC"]);
+$router->route('/supprimerAC',[ACController::class,"supprimerAC"]);
 
-$router->route('/listerProffesseur',[RPController::class,"listerProffesseur"]);
-$router->route('/addProffesseur',[RPController::class,"addProffesseur"]);
-$router->route('/detail',[RPController::class,"detail"]);
-$router->route('/modifier',[RPController::class,"modifier"]);
-$router->route('/supprimer',[RPController::class,"supprimer"]);
+
+
+//**********addClasse********** */
+$router->route('/addClasse',[ClasseController::class,"addClasse"]);
+//**********listerClasse********** */
+$router->route('/listerClasse',[ClasseController::class,"listerClasse"]);
+
+//PROFFESSEUR
+$router->route('/listerProffesseur',[ProffesseurController::class,"listerProffesseur"]);
+$router->route('/addProffesseur',[ProffesseurController::class,"addProffesseur"]);
+$router->route('/detail',[ProffesseurController::class,"detailProffesseur"]);
+$router->route('/modifier',[ProffesseurController::class,"modifierProffesseur"]);
+$router->route('/supprimer',[ProffesseurController::class,"supprimerProffesseur"]);
 $router->route('/listerRP',[RPController::class,"listerRP"]);
 $router->route('/',[RPController::class,"emptyAction"]);
 
-
 //AC
+$router->route('/InscriptionEtudiant',[EtudiantController::class,"InscriptionEtudiant"]);
+$router->route('/listerEtudiant',[EtudiantController::class,"listerEtudiant"]);
+$router->route('/detailEtudiant',[EtudiantController::class,"detailEtudiant"]);
+$router->route('/modifierEtudiant',[EtudiantController::class,"modifierEtudiant"]);
+$router->route('/supprimerEtudiant',[EtudiantController::class,"supprimerEtudiant"]);
+$router->route('/AnnulerInscriptionEtudiant',[EtudiantController::class,"AnnulerInscriptionEtudiant"]);
 
-$router->route('/InscriptionEtudiant',[ACController::class,"InscriptionEtudiant"]);
-$router->route('/listerEtudiant',[ACController::class,"listerEtudiant"]);
-
-$router->route('/detailEtudiant',[ACController::class,"detailEtudiant"]);
-$router->route('/modifierEtudiant',[ACController::class,"modifierEtudiant"]);
-$router->route('/supprimerEtudiant',[ACController::class,"supprimerEtudiant"]);
-$router->route('/AnnulerInscriptionEtudiant',[ACController::class,"AnnulerInscriptionEtudiant"]);
-
-
-
-
+// MODULE
+$router->route('/addModule',[moduleController::class,"addModule"]);
+$router->route('/listerModule',[moduleController::class,"listerModule"]);
+// SERCURITE
 $router->route('/acueil',[SecurityController::class,"acueil"]);
 //RESOLUTION DES ROUTES CETTE PARTIE CONSISTE A VERIFIER SI CETTE ROUTE EXISTE DANS LE TABLEAU
 try {
